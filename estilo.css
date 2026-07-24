@@ -1,0 +1,647 @@
+css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Georgia, serif;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #76145f,
+            #310027 60%,
+            #140012
+        );
+
+    color: white;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   PANTALLA INICIAL
+========================= */
+
+.pantalla {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    animation: aparecer 2s ease;
+}
+
+
+.contenido-inicio {
+    max-width: 800px;
+}
+
+
+h1 {
+    font-size: clamp(2.5rem, 7vw, 5rem);
+
+    color: #ffd6f4;
+
+    text-shadow:
+        0 0 10px #ff7bd5,
+        0 0 25px #ff36bb,
+        0 0 50px #ff1493;
+}
+
+
+h2 {
+    color: #ffe5f7;
+
+    margin-top: 10px;
+
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+
+.frase-principal {
+    margin: 25px auto;
+
+    max-width: 600px;
+
+    font-size: 1.3rem;
+
+    line-height: 1.7;
+
+    color: #ffe8f8;
+}
+
+
+button {
+    margin-top: 20px;
+
+    padding: 18px 35px;
+
+    border: none;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            45deg,
+            #ff4fa3,
+            #ff1493
+        );
+
+    color: white;
+
+    font-size: 1.1rem;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 15px #ff4fa3,
+        0 0 35px #ff1493;
+
+    transition: 0.3s;
+}
+
+
+button:hover {
+    transform: scale(1.1);
+
+    box-shadow:
+        0 0 25px #ff8ddd,
+        0 0 50px #ff1493;
+}
+
+
+
+/* =========================
+   LIRIO
+========================= */
+
+.lirio {
+    position: relative;
+
+    width: 230px;
+
+    height: 310px;
+
+    margin: 0 auto 20px;
+}
+
+
+.petalo {
+    position: absolute;
+
+    width: 90px;
+
+    height: 140px;
+
+    left: 70px;
+
+    top: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8fd,
+            #ffb4df,
+            #d948aa
+        );
+
+    border-radius:
+        80% 20% 80% 20%;
+
+    transform-origin:
+        bottom center;
+
+    box-shadow:
+        0 0 20px #ff8ddd;
+
+    animation:
+        respirar 3s ease-in-out infinite;
+}
+
+
+.p1 {
+    transform: rotate(0deg);
+}
+
+.p2 {
+    transform: rotate(72deg);
+}
+
+.p3 {
+    transform: rotate(144deg);
+}
+
+.p4 {
+    transform: rotate(216deg);
+}
+
+.p5 {
+    transform: rotate(288deg);
+}
+
+
+.centro {
+    position: absolute;
+
+    width: 45px;
+
+    height: 45px;
+
+    background: #ffd83d;
+
+    border-radius: 50%;
+
+    top: 75px;
+
+    left: 92px;
+
+    z-index: 10;
+
+    box-shadow:
+        0 0 20px #ffd700;
+}
+
+
+.tallo {
+    position: absolute;
+
+    width: 10px;
+
+    height: 190px;
+
+    bottom: 0;
+
+    left: 110px;
+
+    background:
+        linear-gradient(
+            to right,
+            #174b25,
+            #63b85b,
+            #174b25
+        );
+
+    border-radius: 10px;
+}
+
+
+.hoja {
+    position: absolute;
+
+    width: 100px;
+
+    height: 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #1f6d32,
+            #71c66b
+        );
+
+    border-radius:
+        100% 0 100% 0;
+}
+
+
+.h1 {
+    bottom: 75px;
+
+    left: 20px;
+
+    transform: rotate(-25deg);
+}
+
+
+.h2 {
+    bottom: 115px;
+
+    right: 10px;
+
+    transform: rotate(205deg);
+}
+
+
+@keyframes respirar {
+
+    0%,
+    100% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.2);
+    }
+}
+
+
+
+/* =========================
+   CARTA
+========================= */
+
+.oculto {
+    display: none;
+}
+
+
+#carta {
+    min-height: 100vh;
+
+    padding: 60px 20px;
+
+    animation: aparecer 2s ease;
+}
+
+
+.carta-contenedor {
+    max-width: 850px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.sobre {
+    font-size: 5rem;
+
+    animation:
+        flotar 2s infinite;
+}
+
+
+.texto-carta {
+    margin-top: 40px;
+
+    padding: 40px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.08
+        );
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.2
+        );
+
+    border-radius: 25px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 0 30px
+        rgba(
+            255,
+            100,
+            200,
+            0.2
+        );
+
+    text-align: left;
+}
+
+
+.texto-carta p {
+    font-size: 1.2rem;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+
+    color: #fff1fa;
+}
+
+
+.texto-carta .amor {
+    text-align: center;
+
+    font-size: 2rem;
+
+    color: #ff9bdc;
+
+    text-shadow:
+        0 0 15px #ff1493;
+}
+
+
+.texto-carta .final {
+    text-align: center;
+
+    font-size: 1.3rem;
+
+    margin-top: 40px;
+}
+
+
+
+/* =========================
+   CONTADOR
+========================= */
+
+.contador {
+    margin-top: 60px;
+
+    padding: 30px;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.07
+        );
+
+    border-radius: 25px;
+}
+
+
+#tiempo {
+    margin-top: 25px;
+
+    font-size: clamp(
+        1.3rem,
+        4vw,
+        2rem
+    );
+
+    color: #ffb5e3;
+
+    text-shadow:
+        0 0 15px #ff1493;
+}
+
+
+
+/* =========================
+   GALERÍA
+========================= */
+
+.titulo-fotos {
+    margin-top: 70px;
+
+    margin-bottom: 30px;
+}
+
+
+.galeria {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                200px,
+                1fr
+            )
+        );
+
+    gap: 20px;
+}
+
+
+.foto {
+    height: 280px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    border:
+        3px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.3
+        );
+
+    box-shadow:
+        0 0 20px
+        rgba(
+            255,
+            100,
+            200,
+            0.4
+        );
+
+    transition: 0.4s;
+}
+
+
+.foto:hover {
+    transform:
+        scale(1.05)
+        rotate(2deg);
+}
+
+
+.foto img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+
+/* =========================
+   MENSAJE FINAL
+========================= */
+
+.mensaje-final {
+    margin-top: 80px;
+
+    padding-bottom: 80px;
+
+    font-size: 1.4rem;
+
+    line-height: 2;
+}
+
+
+.corazon-grande {
+    margin-top: 30px;
+
+    font-size: 5rem;
+
+    animation:
+        latir 1s infinite;
+}
+
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+}
+
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-15px);
+    }
+}
+
+
+@keyframes latir {
+
+    0%,
+    100% {
+        transform:
+            scale(1);
+    }
+
+    50% {
+        transform:
+            scale(1.3);
+    }
+}
+
+
+
+/* =========================
+   CORAZONES
+========================= */
+
+.corazon {
+    position: fixed;
+
+    top: -30px;
+
+    font-size: 20px;
+
+    pointer-events: none;
+
+    animation:
+        caer linear forwards;
+
+    z-index: 100;
+}
+
+
+@keyframes caer {
+
+    from {
+        transform:
+            translateY(-30px)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    to {
+        transform:
+            translateY(110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+
+
+/* =========================
+   CELULARES
+========================= */
+
+@media(max-width:600px) {
+
+    .texto-carta {
+        padding: 25px;
+    }
+
+    .texto-carta p {
+        font-size: 1rem;
+    }
+
+    .foto {
+        height: 350px;
+    }
+
+}
+
